@@ -1,4 +1,4 @@
-package com.example.practice.designpattern.observer;
+package com.example.practice.designpattern.observer_review;
 
 import lombok.Getter;
 
@@ -14,5 +14,9 @@ public class ConcreteObserver implements Observer {
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
+    }
+
+    public ConcreteObserver(Subject weatherData) {
+        weatherData.addObserver(this);
     }
 }

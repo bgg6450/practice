@@ -15,6 +15,7 @@ public class WeatherData implements Subject {
     private float humidity;
     private float pressure;
 
+    // 초기화 안해주면 null 이 할당되므로 나중에 add 할 때 NPE 발생
     public WeatherData() {
         observers = new ArrayList<>();
     }
