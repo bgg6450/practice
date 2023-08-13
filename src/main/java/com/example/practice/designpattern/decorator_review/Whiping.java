@@ -3,7 +3,7 @@ package com.example.practice.designpattern.decorator_review;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class Whiping extends Condiment {
+public class Whiping implements Condiment {
 
     private final Beverage beverage;
 
