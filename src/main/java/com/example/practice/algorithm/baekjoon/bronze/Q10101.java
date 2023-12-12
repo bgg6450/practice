@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
  * 브론즈4
  * 삼각형 외우기. 정답률 57%
  */
-public class Q_10101 {
+public class Q10101 {
 
     public static void main(String args[]) throws IOException {
 

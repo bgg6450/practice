@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 /**
  * 뒤집기. 정답률 55.6%
  */
-public class Q_1439 {
+public class Q1439 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String s = br.readLine();

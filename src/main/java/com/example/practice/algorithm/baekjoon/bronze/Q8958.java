@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 /**
  * OX 퀴즈. 정답률 50%
  */
-public class Q_8958 {
+public class Q8958 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(bf.readLine());

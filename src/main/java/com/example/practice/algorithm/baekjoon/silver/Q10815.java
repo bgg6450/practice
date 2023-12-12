@@ -1,39 +1,31 @@
 package com.example.practice.algorithm.baekjoon.silver;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Arrays;
-import java.util.List;
 import java.util.StringTokenizer;
 
-public class Q_10815 {
+public class Q10815 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
         int n = Integer.parseInt(br.readLine());
-        String[] s1 = br.readLine().split(" ");
+        StringTokenizer st1 = new StringTokenizer(br.readLine());
         int[] arr1 = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr1[i] = Integer.parseInt(s1[i]);
-        }
+        for (int i = 0; i < n; i++)
+            arr1[i] = Integer.parseInt(st1.nextToken());
+        Arrays.sort(arr1);
+
         int m = Integer.parseInt(br.readLine());
-        String[] s2 = br.readLine().split(" ");
-        int[] arr2 = new int[m];
+        StringTokenizer st2 = new StringTokenizer(br.readLine());
         for (int i = 0; i < m; i++) {
-            arr2[i] = Integer.parseInt(s2[i]);
-        }
-        Arrays.sort(arr2);
-        String[] result = new String[m];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (judge(arr1[j], arr2)) {
-                    result[i] = "1";
-                    break;
-                }
-                result[i] = "0";
+            int num = Integer.parseInt(st2.nextToken());
+            if (judge(num, arr1)) {
+                bw.write("1 ");
             }
+            else bw.write("0 ");
         }
-        Arrays.stream(result).forEach(System.out::println);
+        bw.close();
     }
 
     static boolean judge(int num, int[] arr) {

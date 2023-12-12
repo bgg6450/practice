@@ -7,7 +7,7 @@ import static java.lang.System.*;
 /**
  * 쿼드트리. 정답률 62%
  */
-public class Q_1992 {
+public class Q1992 {
 
     public static int[][] img;
     public static StringBuilder sb = new StringBuilder();

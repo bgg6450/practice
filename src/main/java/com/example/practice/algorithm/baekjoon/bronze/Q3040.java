@@ -11,7 +11,7 @@ import static java.lang.System.*;
  * 브론즈2
  * 백설 공주와 일곱 난쟁이. 정답률 69%
  */
-public class Q_3040 {
+public class Q3040 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(in));
         int[] nums = new int[9];

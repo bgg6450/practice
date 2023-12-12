@@ -2,7 +2,7 @@ package com.example.practice.algorithm.baekjoon.silver;
 
 import java.util.Scanner;
 
-public class Q_1992_1 {
+public class Q1992_1 {
 
     public static StringBuilder result = new StringBuilder();
     public static int[][] img;

@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Q_1340 {
+public class Q1340 {
 
     private static final int DAY_TIME = 24 * 60 * 60;
     public static void main(String[] args) throws IOException {
