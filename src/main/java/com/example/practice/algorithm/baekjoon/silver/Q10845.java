@@ -9,16 +9,30 @@ public class Q10845 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         Deque<Integer> queue = new ArrayDeque<>();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < n; i++) {
             String s = br.readLine();
             switch (s) {
-                case "front" -> System.out.println(queue.isEmpty() ? -1 : queue.getFirst());
-                case "back" -> System.out.println(queue.isEmpty() ? -1 : queue.getLast());
-                case "empty" -> System.out.println(queue.isEmpty() ? 1 : 0);
-                case "size" -> System.out.println(queue.size());
-                case "pop" -> System.out.println(queue.isEmpty() ? -1 : queue.poll());
-                default -> queue.add(Integer.parseInt(s.split(" ")[1]));
+                case "front":
+                    sb.append(queue.isEmpty() ? -1 : queue.getFirst()).append("\n");
+                    break;
+                case "back":
+                    sb.append(queue.isEmpty() ? -1 : queue.getLast()).append("\n");
+                    break;
+                case "empty":
+                    sb.append(queue.isEmpty() ? 1 : 0).append("\n");
+                    break;
+                case "size":
+                    sb.append(queue.size()).append("\n");
+                    break;
+                case "pop":
+                    sb.append(queue.isEmpty() ? -1 : queue.poll()).append("\n");
+                    break;
+                default:
+                    queue.add(Integer.parseInt(s.split(" ")[1]));
+                    break;
             }
         }
+        System.out.println(sb);
     }
 }
