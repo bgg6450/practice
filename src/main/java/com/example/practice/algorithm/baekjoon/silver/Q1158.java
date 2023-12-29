@@ -11,25 +11,21 @@ public class Q1158 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] s = br.readLine().split(" ");
         int n = Integer.parseInt(s[0]);
-        int k = Integer.parseInt(s[1]);
         Queue<Integer> queue = new LinkedList<>();
-
-        while (queue.size() > 1) {
-            if (queue.size() > k) {
-                queue.offer(queue.poll());
-
-            }
+        for (int i = 1; i < n+1; i++) {
+            queue.offer(i);
         }
-        System.out.println();
+        int k = Integer.parseInt(s[1]);
+        StringBuilder sb = new StringBuilder();
+        sb.append("<");
 
-//        output
-//        1 2 3 4 5 6 7
-//        (3) 4 5 6 7 1 2
-//        (6) 7 1 2 4 5
-//        (2) 4 5 7 1
-//        (7) 1 4 5
-//        (5) 1 4
-//        (1) 4
-//        (4)
+        while (queue.size() != 1) {
+            for (int i = 0; i < k-1; i++) {
+                queue.offer(queue.poll());
+            }
+            sb.append(queue.poll()).append(", ");
+        }
+        sb.append(queue.poll()).append(">");
+        System.out.println(sb);
     }
 }
